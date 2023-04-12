@@ -104,8 +104,8 @@ void MainWindow::setSingleSelectionViewStyle()
 void MainWindow::setClickableSignalDelegate()
 {
     clickableDelegate = new ClickableLinkDelegate(this);
-    ui->searchResultView_->setItemDelegateForColumn(4, clickableDelegate);
-    connect(clickableDelegate, &ClickableLinkDelegate::clicked, this, &MainWindow::openLink);
+    ui->searchResultView_->setItemDelegateForColumn((int)SearchTblColEnum::Address, clickableDelegate);
+    connect(ui->searchResultView_, &AXTableView::onLinkCLicked, this, &MainWindow::openLink);
 }
 
 void MainWindow::setDashboardPageListModel()
@@ -265,15 +265,11 @@ void MainWindow::search(QString query, SearchQueryType type)
 {
     if (m_timer.elapsed() > 3000)
     {
-        qDebug() << "SALAM SEARCH";
         if (!IsInternetAvailable())
         {
-            qDebug() << "NO INTERNET";
-
             QMessageBox::warning(this, "Warning", "You are not connected to the internet.");
             return;
         }
-        qDebug() << "SEARCH " << query;
         if (query.isEmpty())
             QMessageBox::warning(this, "Warning", "Please write something to search.");
 
@@ -298,7 +294,6 @@ void MainWindow::search(QString query, SearchQueryType type)
     else
     {
         ui->searchBtn_->setDisabled(true);
-        qDebug() << "WAIT 3 seconds";
         // Start a timer to re-enable the button after 3 seconds
         QTimer::singleShot(3000 - m_timer.elapsed(), [this](){
             ui->searchBtn_->setEnabled(true);
@@ -319,7 +314,6 @@ void MainWindow::on_searchBtn_clicked()
 
 void MainWindow::slotCustomContextMenumListView(const QPoint &point)
 {
-    qDebug() << "SALAM slotCustomContextMenumListView";
     if (m_lblModel->rowCount() < 1 || ui->lblListView_->indexAt(point) == m_homeIndex)
         return;
     QMenu* menu = new QMenu(this);
@@ -337,7 +331,6 @@ void MainWindow::slotCustomContextMenumListView(const QPoint &point)
 void MainWindow::slotEditLabel()
 {
     auto hoveredIndex = ui->lblListView_->hoveredIndex();
-    qDebug() << "SlotEditLabel " << hoveredIndex;
     if (hoveredIndex == m_homeIndex)
         return;
     on_lblListView_doubleClicked(hoveredIndex);
@@ -346,7 +339,6 @@ void MainWindow::slotEditLabel()
 void MainWindow::slotRmLabel()
 {
     auto hoveredIndex = ui->lblListView_->hoveredIndex();
-    qDebug() << "SlotEditLabel " << hoveredIndex;
     if (hoveredIndex == m_homeIndex)
         return;
     QString name = ui->lblListView_->model()->data(hoveredIndex, Qt::DisplayRole).toString();
@@ -387,10 +379,9 @@ void MainWindow::saveAsActionSlotRow()
     {
         QModelIndex index = selection.at(i);
         int row_ = index.row();
-        int col_ = index.column();
+//        int col_ = index.column();
         QModelIndex index1 =  ui->searchResultView_->model()->index(row_, 0, QModelIndex());
         QString text = ui->searchResultView_->model()->data(index1).toString();
-        qDebug() << "(" << row_ << ", " << col_ << "): " <<  "Selected row " << text;
     }
 
     //windows desktop address

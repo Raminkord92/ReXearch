@@ -17,6 +17,7 @@ protected:
     void mouseDoubleClickEvent(QMouseEvent *event) override;
 signals:
     void emitDoubleClicked(const QModelIndex& index);
+    void onLinkCLicked(const QString& text);
 };
 
 #endif // AXTABLEVIEW_H

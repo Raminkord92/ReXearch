@@ -20,7 +20,7 @@ QVector<DashboardLabel> DBManager::getLabels() const
     QVector<DashboardLabel> output_v1;
     if (!query.exec())
     {
-        qDebug() << "error in red labels from table in database " << query.lastError();
+        qDebug() << "[ReXearch] (DBManager) error in reding labels from table in database " << query.lastError();
         return output_v1;
     }
 
@@ -49,14 +49,12 @@ bool DBManager::addLblToDB(const DashboardLabel &lbl)
     QString detailsBinded = ":details";
     QString colorBinded = ":color";
     QString queryString = QString("INSERT INTO %1 (%2, %3, %4) VALUES (%5, %6, %7)").arg(tblLabelName, name, details, color, nameBinded, detailsBinded, colorBinded);
-    qDebug() << "Insert query is " << queryString;
     query.prepare(queryString);
     query.bindValue(nameBinded, lbl.name);
     query.bindValue(detailsBinded, lbl.details);
     query.bindValue(colorBinded, lbl.color);
     if (!query.exec())
     {
-        qDebug() << "addLblToDB This record cannot be added";
         return false;
     }
     return true;
@@ -66,11 +64,9 @@ bool DBManager::removeFromDB(const QString &name)
 {
     QSqlQuery query;
     QString queryString = QString("DELETE FROM %1 WHERE name = '%2'").arg(tblLabelName, name);
-    qDebug() << "removeFromDB" << queryString;
     query.prepare(queryString);
     if (!query.exec())
     {
-        qDebug() << "removeFromDB" << query.lastError();
         return false;
     }
 
@@ -85,7 +81,6 @@ bool DBManager::addLblToDB(const QString &name, const QString &details, const QS
 
 void DBManager::updateLabel(const QString &name, const DashboardLabel &label, int flag)
 {
-    qDebug() << "SALAM IN updateLabel";
     QString name_ = tblLabelColNames[DashboardLabelCol::name];
     QString details_ = tblLabelColNames[DashboardLabelCol::details];
     QString color_ = tblLabelColNames[DashboardLabelCol::color];
@@ -116,7 +111,6 @@ void DBManager::updateLabel(const QString &name, const DashboardLabel &label, in
     query.prepare(stringQuery);
     if (!query.exec())
     {
-        qDebug() << "Can't update the table error: " << query.lastError();
         return;
     }
     emit emitLblTblUpdated();
@@ -133,11 +127,9 @@ bool DBManager::createTables()
                                   "%2 TEXT UNIQUE,"
                                   "%3 TEXT,"
                                   "%4 TEXT)").arg(tblLabelName, name, details, color);
-    qDebug() << "Create table query" << queryCreate;
     query.prepare(queryCreate);
     if (!query.exec())
     {
-        qDebug() << "EROR " << query.lastError();
         qFatal("Failed to create labels table");
         return false;
     }

@@ -135,7 +135,6 @@ bool AXTableModel::removeRows(int position, int rows, const QModelIndex &index)
     {
         modelData.removeFirst();
     }
-    qDebug() << "SIZE OF LIST" << modelData.isEmpty() << modelData.size();
     endRemoveRows();
 
     return true;

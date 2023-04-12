@@ -137,7 +137,6 @@ void AXDialog::setDeails(const QString &newDetails)
 
 void AXDialog::on_btnOK_clicked()
 {
-    qDebug() << "on_btnOK_clicked";
     auto name = ui->lneLblName->text();
     setName(name);
     //cheeck the name if it already exists
@@ -151,7 +150,6 @@ void AXDialog::on_btnOK_clicked()
             numTimes++;
         if (numTimes > 0)
         {
-            qDebug() << "on_btnOK_clicked";
             QMessageBox::critical(this, "Error", "Label name should be unique. This label name already exists.");
             return;
         }
