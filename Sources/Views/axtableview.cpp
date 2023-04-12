@@ -2,6 +2,7 @@
 
 #include <QMouseEvent>
 #include <QDebug>
+#include "Headers/Common.h"
 
 AXTableView::AXTableView(QObject *parent)
 {
@@ -15,7 +16,7 @@ void AXTableView::mouseMoveEvent(QMouseEvent *event)
     if (!index.isValid())
         return;
 
-    if (index.column() == 4)
+    if (index.column() == (int)SearchTblColEnum::Address)
     {
         this->setCursor(Qt::CursorShape::PointingHandCursor);
 
@@ -37,10 +38,12 @@ void AXTableView::mousePressEvent(QMouseEvent *event)
     }
     else
     {
-        qDebug() << "SALAM LEFT CLICK";
+        if (index.column() == (int)SearchTblColEnum::Address)
+            emit onLinkCLicked(index.model()->data(index).toString());
         setSelectionMode(QAbstractItemView::SingleSelection);
         setSelectionBehavior(QAbstractItemView::SelectRows);
         setCurrentIndex(index);
+
 
     }
 
