@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1122.5197"
+   height="415.74802"
+   viewBox="0 0 296.99999 110"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="header.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#9980ff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.87058824"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.46769781"
+     inkscape:cx="722.68886"
+     inkscape:cy="220.22767"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <filter
+       inkscape:label="Translucent"
+       inkscape:menu="Bevels"
+       inkscape:menu-tooltip="Illuminated translucent plastic or glass effect"
+       style="color-interpolation-filters:sRGB;"
+       id="filter636"
+       x="-0.13121903"
+       y="-0.57302077"
+       width="1.2624381"
+       height="2.1460415">
+      <feConvolveMatrix
+         order="3 3"
+         kernelMatrix="0 -0.15 0 -0.15 1.6 -0.15 0 -0.15 0"
+         divisor="1"
+         in="SourceGraphic"
+         targetX="1"
+         targetY="1"
+         id="feConvolveMatrix634"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix700" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend702"
+         mode="screen"
+         result="result1"
+         in="fbSourceGraphic" />
+      <feGaussianBlur
+         id="feGaussianBlur704"
+         stdDeviation="8"
+         result="result6" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite706"
+         operator="xor"
+         in="result6" />
+      <feGaussianBlur
+         id="feGaussianBlur708"
+         stdDeviation="5"
+         result="result2" />
+      <feComposite
+         in2="result1"
+         id="feComposite710"
+         operator="atop"
+         result="result92" />
+      <feComposite
+         in2="result92"
+         id="feComposite712"
+         operator="xor"
+         in="result2"
+         result="result4" />
+      <feGaussianBlur
+         id="feGaussianBlur714"
+         stdDeviation="1"
+         result="result3"
+         in="result4" />
+      <feSpecularLighting
+         id="feSpecularLighting716"
+         surfaceScale="3"
+         specularConstant="1.5"
+         specularExponent="45"
+         result="result5">
+        <fePointLight
+           id="fePointLight718"
+           x="-5000"
+           y="-8000"
+           z="20000" />
+      </feSpecularLighting>
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite720"
+         operator="in"
+         result="result93" />
+      <feComposite
+         in2="result93"
+         id="feComposite722"
+         operator="arithmetic"
+         k2="1"
+         k3="2"
+         in="result3"
+         result="result94" />
+      <feComposite
+         in2="result94"
+         id="feComposite724"
+         operator="atop"
+         in="result5"
+         result="result95" />
+      <feBlend
+         in2="result95"
+         id="feBlend726"
+         mode="screen" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.7791px;font-family:'Buxton Sketch';-inkscape-font-specification:'Buxton Sketch, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#eea48a;stroke-width:1.18289;filter:url(#filter636)"
+       x="18.993544"
+       y="73.786819"
+       id="text117"
+       transform="matrix(0.95438708,-0.08965205,0.06248314,1.0419234,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan115"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.7791px;font-family:'Buxton Sketch';-inkscape-font-specification:'Buxton Sketch, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#eea48a;stroke-width:1.18289"
+         x="18.993544"
+         y="73.786819">Paper Digger</tspan></text>
+    <circle
+       id="path510"
+       style="fill:#eea48a;stroke:#000000;stroke-width:0.264583"
+       cx="38.468575"
+       cy="92.777145"
+       r="0.075352594" />
+    <circle
+       id="path516"
+       style="fill:#eea48a;stroke:#000000;stroke-width:0.264583"
+       cx="145.95428"
+       cy="85.988579"
+       r="0.075352594" />
+  </g>
+</svg>

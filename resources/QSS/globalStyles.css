@@ -1,0 +1,149 @@
+QListView { 
+	font-family: Arial;
+	font-size: 12pt;
+	background:transparent;
+ }
+
+QListView::item {
+	height: 30px;
+
+}
+
+QListView::item:hover {
+    background-color: rgba(52,73,94, 0.1);
+    border-top: none;
+    border-left:none;
+    border-bottom:none;
+    border-left:3px solid  rgb(44,205,112);;
+}
+
+QListView::item:selected {
+    background-color: rgba(52,73,94, 0.4);
+    border-top: none;
+    border-left:none;
+    border-bottom:none;
+    border-left:3px solid  rgb(44,205,112);;
+}
+
+QTableView::item:selected {
+    background-color: rgba(52,73,94, 0.6);
+    border-top: none;
+    border-left:none;
+    border-bottom:none;
+}
+
+QTableView::item:hover {
+    background-color: rgba(52,73,94, 0.3);
+    border-top: none;
+    border-left:none;
+    border-bottom:none;
+}
+
+QMenu::item:selected {
+    background-color: rgba(52,73,94, 0.3);
+    border-top: none;
+    border-left:none;
+    border-bottom:none;
+    border-left:3px solid  rgb(44,205,112);;
+}
+QTableView{
+	background:transparent;
+	}
+
+/* Set the default font family and size for all elements */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+	background-color: #F1E3E1;
+}
+
+/* Set the default background and text color for all elements */
+QWidget {
+    background-color: #F6F8FA;
+    color: #222222;
+}
+
+/* Add a subtle shadow to main windows */
+QMainWindow {
+    border: 1px solid #999999;
+    border-radius: 4px;
+	background-color: #F1E3E1;
+
+}
+
+
+/* Set the default style for buttons */
+QPushButton {
+    background-color: #007FFF;
+    border: 1px solid #007FFF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+QPushButton:disabled {
+    background-color: lightGrey;
+	color: gray;
+	border: 1px solid red;
+}
+
+/* Change the button style on hover */
+QPushButton:hover {
+    background-color: #FFFFFF;
+    color: #007FFF;
+}
+
+
+/* Set the default style for text boxes */
+QLineEdit {
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+}
+
+/* Change the text box style on focus */
+QLineEdit:focus {
+    border: 1px solid #007FFF;
+}
+
+QLineEdit:disabled {
+	border: 1px solid red;
+}
+
+/* Set the default style for labels */
+QLabel {
+    padding: 2px;
+}
+
+/* Set the default style for table headers */
+QHeaderView::section {
+    background-color: #007FFF;
+    color: #FFFFFF;
+    padding: 4px;
+}
+
+/* Set the default style for table cells */
+QTableView QTableCornerButton::section,
+QTableView QHeaderView::section,
+QTableView QAbstractItemView::section {
+    background-color: #F8F8F8;
+    color: #222222;
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+}
+
+
+QComboBox{
+	border-radius: 5px;
+}
+
+
+QComboBox {
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    color: #333333;
+    font: 14px "Arial";
+    padding: 2px 16px 2px 8px;
+    min-width: 6em;
+    background-color: #f6f6f6;
+}
+

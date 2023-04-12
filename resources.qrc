@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/header.jpg</file>
+        <file>resources/QSS/globalStyles.css</file>
+        <file>resources/libs.qrc</file>
+    </qresource>
+</RCC>
